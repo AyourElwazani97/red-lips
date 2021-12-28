@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/hero/Hero";
 import Story from "../components/OurStory/Story";
+import Reviews from "../components/Reviews/Reviews";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <Hero styles={styles} />
       <Story styles={styles} />
+      <Reviews styles={styles} />
     </div>
   );
 }
