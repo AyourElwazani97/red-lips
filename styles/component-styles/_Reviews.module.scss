@@ -1,4 +1,9 @@
-._review{
-    width: $per;
-    height: $per;
+._review {
+  canvas {
+      position: absolute;
+      height: $per !important;
+      width: $per !important;
+      margin: 0;
+      padding: 0;
+  }
 }
