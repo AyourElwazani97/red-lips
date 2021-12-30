@@ -7,9 +7,20 @@ function Reviews({ styles }) {
   const reviews_parent = useRef(null);
   const review = useRef(null);
   const secondContentRev = useRef(null);
-  const thirdContentRev = useRef(null);
+  const firstContentRev = useRef(null);
   const lastContentRev = useRef(null);
+  const reviewsTitle = useRef(null);
   useEffect(() => {
+    const getRevsTitle = reviewsTitle.current;
+    getRevsTitle.innerHTML = getRevsTitle.textContent.replace(
+      /\S/g,
+      '<span class="GSAPSpan">$&</span>'
+    );
+    const GsapSpans = document.querySelectorAll(".GSAPSpan");
+    GsapSpans.forEach((letter, i) => {
+      letter.style.color = "#FFFS";
+    });
+    console.log(getRevsTitle);
     const tl = gsap.timeline({
       scrollTrigger: {
         ease: Expo.easeOut,
@@ -22,65 +33,49 @@ function Reviews({ styles }) {
       },
     });
     tl.fromTo(
-      reviews_parent.current.children[2],
+      firstContentRev.current,
       { clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)" },
       {
         clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0% 50%)",
         duartion: 2,
       }
     )
-      .to(reviews_parent.current.children[2], {
-        clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)",
-        duartion: 2,
-      })
       .fromTo(
-        reviews_parent.current.children[0],
+        secondContentRev.current,
+        { clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)" },
+        {
+          clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0% 100%)",
+          duartion: 2,
+        }
+      )
+      .fromTo(
+        lastContentRev.current,
         { clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)" },
         {
           clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0% 50%)",
           duartion: 2,
         }
-      )
-      .to(reviews_parent.current.children[0], {
-        clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)",
-        duartion: 2,
-      })
-      .fromTo(
-        reviews_parent.current.children[1],
-        { clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)" },
-        {
-          clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0% 50%)",
-          duartion: 2,
-        }
-      )
-      .to(reviews_parent.current.children[1], {
-        clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)",
-        duartion: 2,
-      });
+      );
   }, []);
   return (
     <div ref={review} className={styles._review}>
-      <h1>Testimonial</h1>
+      <div className={styles._reviews_Title} ref={reviewsTitle}>
+        testimonial
+      </div>
       <div ref={reviews_parent} className={styles._reviews_Child}>
-        <div className={styles._reviews_Child_each}>
+        <div ref={firstContentRev} className={styles._reviews_Child_each}>
           <div>
             <img src="./testimonial2.jpg" alt="" />
           </div>
-          <div
-            ref={secondContentRev}
-            className={styles._reviews_Child_each_textContent}
-          >
+          <div className={styles._reviews_Child_each_textContent}>
             <div>
               <h2>
-                Oum
+                Oumaima
                 <br />
                 Tourîa
               </h2>
             </div>
             <div className={styles._reviews_discover}>
-              <div>
-                <h6>Discover</h6>
-              </div>
               <div>
                 <span>
                   <FaLongArrowAltRight />
@@ -89,9 +84,24 @@ function Reviews({ styles }) {
             </div>
           </div>
         </div>
-        <div ref={thirdContentRev} className={styles._reviews_Child_each}>
+        <div ref={secondContentRev} className={styles._reviews_Child_each}>
           <div>
             <img src="./testimonial1.jpg" alt="" />
+          </div>
+          <div className={styles._reviews_Child_each_textContent}>
+            <div>
+              <h2>
+                Ouma
+                <br />
+                Tourîa
+              </h2>
+            </div>
+            <div className={styles._reviews_discover}></div>
+          </div>
+        </div>
+        <div ref={lastContentRev} className={styles._reviews_Child_each}>
+          <div>
+            <img src="./testimonial3.jpg" alt="" />
           </div>
           <div className={styles._reviews_Child_each_textContent}>
             <div>
@@ -102,31 +112,6 @@ function Reviews({ styles }) {
               </h2>
             </div>
             <div className={styles._reviews_discover}>
-              <div>
-                <h6>Discover</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles._reviews_Child_each}>
-          <div>
-            <img src="./testimonial3.jpg" alt="" />
-          </div>
-          <div
-            ref={lastContentRev}
-            className={styles._reviews_Child_each_textContent}
-          >
-            <div>
-              <h2>
-                Oum
-                <br />
-                Tourîa
-              </h2>
-            </div>
-            <div className={styles._reviews_discover}>
-              <div>
-                <h6>Discover</h6>
-              </div>
               <div>
                 <span>
                   <FaLongArrowAltRight />
