@@ -127,7 +127,7 @@ function Reviews({ styles }) {
         </div>
       </div>
       <div className={styles.each_rev_textContent}>
-        <span>01</span>
+        <span>00</span>
       </div>
     </div>
   );

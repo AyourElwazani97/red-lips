@@ -65,11 +65,10 @@
     }
   }
   .each_rev_textContent {
-    background: linear-gradient(to right,#FFF 60% , #000 60%);
-    width:155px;
-    height: 300px;
+    background: linear-gradient(to right,#FFF 50% , #000 50%);
+    width:160px;
+    height:200px;
     position: $ab;
-    mix-blend-mode: difference;
     bottom: 0;
     right: 46%;
     display: $f;
@@ -80,7 +79,8 @@
       position: $ab;
       left:0%;
       right: 0%;
-      top:50%;
+      top:8%;
+      color: red;
     }
   }
 }
