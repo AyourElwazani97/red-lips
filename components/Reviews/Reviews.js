@@ -16,11 +16,6 @@ function Reviews({ styles }) {
       /\S/g,
       '<span class="GSAPSpan">$&</span>'
     );
-    const GsapSpans = document.querySelectorAll(".GSAPSpan");
-    GsapSpans.forEach((letter, i) => {
-      letter.style.color = "#FFFS";
-    });
-    console.log(getRevsTitle);
     const tl = gsap.timeline({
       scrollTrigger: {
         ease: Expo.easeOut,
@@ -32,34 +27,53 @@ function Reviews({ styles }) {
         pin: true,
       },
     });
-    tl.fromTo(
-      firstContentRev.current,
-      { clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)" },
-      {
-        clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0% 50%)",
-        duartion: 2,
-      }
-    )
+
+    tl.to(reviewsTitle.current.children[0], {
+      y: -10,
+    })
+      .to(reviewsTitle.current.children[1], {
+        y: -10,
+      })
+      .to(reviewsTitle.current.children[2], {
+        y: -10,
+      })
+      .to(reviewsTitle.current.children[3], {
+        y: -10,
+      })
+      .to(reviewsTitle.current.children[4], {
+        y: -10,
+      })
+      .to(reviewsTitle.current.children[5], {
+        y: -10,
+      })
+      .fromTo(
+        firstContentRev.current,
+        { clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)" },
+        {
+          clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0% 50%)",
+        }
+      )
+      .to(firstContentRev.current.children[0], { scale: 1.6 })
       .fromTo(
         secondContentRev.current,
         { clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)" },
         {
           clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0% 100%)",
-          duartion: 2,
         }
       )
+      .to(secondContentRev.current.children[0], { scale: 1.6 })
       .fromTo(
         lastContentRev.current,
         { clipPath: "polygon(0 0, 0 0, 0% 100%, 0% 100%)" },
         {
           clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0% 50%)",
-          duartion: 2,
         }
-      );
+      )
+      .to(lastContentRev.current.children[0], { scale: 1.6 });
   }, []);
   return (
     <div ref={review} className={styles._review}>
-      <div className={styles._reviews_Title} ref={reviewsTitle}>
+      <div id="revTitle" className={styles._reviews_Title} ref={reviewsTitle}>
         testimonial
       </div>
       <div ref={reviews_parent} className={styles._reviews_Child}>
@@ -69,11 +83,7 @@ function Reviews({ styles }) {
           </div>
           <div className={styles._reviews_Child_each_textContent}>
             <div>
-              <h2>
-                Oumaima
-                <br />
-                Tourîa
-              </h2>
+              <h2>Ilham</h2>
             </div>
             <div className={styles._reviews_discover}>
               <div>
@@ -90,11 +100,7 @@ function Reviews({ styles }) {
           </div>
           <div className={styles._reviews_Child_each_textContent}>
             <div>
-              <h2>
-                Ouma
-                <br />
-                Tourîa
-              </h2>
+              <h2>Ikram</h2>
             </div>
             <div className={styles._reviews_discover}></div>
           </div>
@@ -106,9 +112,8 @@ function Reviews({ styles }) {
           <div className={styles._reviews_Child_each_textContent}>
             <div>
               <h2>
-                Oum
-                <br />
-                Tourîa
+                Nassima
+                <br />& Tourîa
               </h2>
             </div>
             <div className={styles._reviews_discover}>
@@ -120,6 +125,9 @@ function Reviews({ styles }) {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.each_rev_textContent}>
+        <span>01</span>
       </div>
     </div>
   );

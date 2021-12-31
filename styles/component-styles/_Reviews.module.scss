@@ -9,19 +9,20 @@
   background: linear-gradient(to left, $red 51%, #000 50.5%);
   position: $re;
   ._reviews_Title {
-    position: absolute;
-    user-select: none;
-    pointer-events: none;
-    right: 50%;
-    .GSAPSpan {
-      display: inline-block;
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      font-weight: $b;
+    position: $ab;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    top: 20%;
+    transform: rotate(90deg);
+    span {
+      font-size: 8em !important;
+      text-transform: uppercase;
       font-family: "Maragsa";
-      font-size: 10em !important;
-      z-index: 1;
+      mix-blend-mode: difference;
+      color: #fff;
+      text-align: $c;
+      transform: translate(150px, 150px);
     }
   }
   ._reviews_Child {
@@ -61,6 +62,25 @@
         align-items: $c;
         width: 300px;
       }
+    }
+  }
+  .each_rev_textContent {
+    background: linear-gradient(to right,#FFF 60% , #000 60%);
+    width:155px;
+    height: 300px;
+    position: $ab;
+    mix-blend-mode: difference;
+    bottom: 0;
+    right: 46%;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    span{
+      font-size: 10em;
+      position: $ab;
+      left:0%;
+      right: 0%;
+      top:50%;
     }
   }
 }
