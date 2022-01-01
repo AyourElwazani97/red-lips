@@ -2,6 +2,7 @@ import Head from "next/head";
 import Hero from "../components/hero/Hero";
 import Story from "../components/OurStory/Story";
 import Reviews from "../components/Reviews/Reviews";
+import Lipsvideo from "../components/Video/Lipsvideo";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero styles={styles} />
       <Story styles={styles} />
       <Reviews styles={styles} />
+      <Lipsvideo styles={styles}/>
     </div>
   );
 }

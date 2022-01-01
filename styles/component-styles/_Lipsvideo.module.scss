@@ -1,0 +1,25 @@
+._lipsVideo {
+  width: $per;
+  height: $vh;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  ._lipsVideo_Child {
+    position: $re;
+    width: $perhelf;
+  }
+  video {
+    position: $re;
+    width: 400px !important;
+    height: 400px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  ._lipsVideo_content {
+    position: $ab;
+  }
+  ._lipsVideo_containter {
+    position: $ab;
+    left: 0;
+  }
+}
