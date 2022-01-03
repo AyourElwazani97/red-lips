@@ -7,7 +7,27 @@
   width: $per;
   background: #000;
   color: #fff;
-  padding: $padd;
+  visibility: hidden;
+  ._hero_bg_red_left {
+    position: $ab;
+    width: $per;
+    background: #FFF;
+    z-index: 9 !important;
+    height: $vh;
+    margin: 0 !important;
+    padding: 0 !important;
+    left: -50%;
+  }
+  ._hero_bg_red_right {
+    position: $ab;
+    width: $per;
+    background: red;
+    z-index: 9 !important;
+    height: $vh;
+    margin: 0 !important;
+    padding: 0 !important;
+    right: 50%;
+  }
   h1 {
     font-size: $size;
     letter-spacing: 30px;

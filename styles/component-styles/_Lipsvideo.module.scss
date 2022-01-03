@@ -4,22 +4,38 @@
   display: $f;
   justify-content: $c;
   align-items: $c;
+  background: #000;
+  color: #fff;
   ._lipsVideo_Child {
     position: $re;
     width: $perhelf;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
   }
   video {
-    position: $re;
-    width: 400px !important;
+    position: $ab;
+    width: 600px !important;
     height: 400px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
+  ._lipsVideo_containter_last{
+    position: $ab;
+  }
   ._lipsVideo_content {
     position: $ab;
+    span {
+      font-size: $size;
+      mix-blend-mode: difference;
+      font-family: "Maragsa";
+    }
+    left: 8%;
+    z-index: 1;
   }
   ._lipsVideo_containter {
     position: $ab;
-    left: 0;
+    left: -10%;
+    top: 70%;
   }
 }

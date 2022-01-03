@@ -16,7 +16,7 @@
     top: 20%;
     transform: rotate(90deg);
     span {
-      font-size: 8em !important;
+      font-size: 6em !important;
       text-transform: uppercase;
       font-family: "Maragsa";
       mix-blend-mode: difference;
@@ -34,7 +34,7 @@
   }
   ._reviews_Child_each {
     position: $ab;
-    width: 360px;
+    width: 300px;
     display: $f;
     justify-content: $c;
     align-items: $c;

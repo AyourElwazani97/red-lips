@@ -9,7 +9,11 @@ function Hero({ styles }) {
   const HeroImg = useRef(null);
   const rightTitle = useRef(null);
   const inDoubt = useRef(null);
+  const heroParent = useRef(null);
+  const bg_right = useRef(null);
+  const bg_left = useRef(null);
   useEffect(() => {
+    gsap.to(heroParent.current, { css: { visibility: "visible" } });
     const split = new SplitText(Main_Title.current, {
       type: "lines",
       linesClass: "lineChildren",
@@ -19,7 +23,9 @@ function Hero({ styles }) {
       linesClass: "lineParent",
     });
     const tl = gsap.timeline({ defaults: { delay: 0.2, duration: 1.5 } });
-    tl.fromTo(inDoubt.current, { opacity: 0 }, { opacity: 1 })
+    tl.to(bg_left.current, { left: "100%", duration: 2 })
+      .to(bg_right.current, { left: "-100%", duration: 2 })
+      .fromTo(inDoubt.current, { opacity: 0 }, { opacity: 1 })
       .fromTo(
         inDoubt.current,
         { position: "absolute", top: "50%" },
@@ -75,7 +81,9 @@ function Hero({ styles }) {
           }
         `}
       </style>
-      <div className={styles._hero}>
+      <div ref={heroParent} className={styles._hero}>
+        <div ref={bg_left} className={styles._hero_bg_red_left}></div>
+        <div ref={bg_right} className={styles._hero_bg_red_right}></div>
         <h1 ref={Main_Title}>Red Lips</h1>
         <div className={styles._hero_Child}>
           <div ref={leftTitle} className={styles.left_title}>
