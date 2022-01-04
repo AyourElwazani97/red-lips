@@ -21,8 +21,10 @@ function Hero({ styles }) {
       type: "lines",
       linesClass: "lineParent",
     });
-    const tlIntroduce = gsap
-      .timeline({ defaults: { delay: 0.5, duration: 1.5 } })
+    const tlIntroduce = gsap.timeline({
+      defaults: { delay: 0.5, duration: 1.5 },
+    });
+    tlIntroduce
       .to(bg_left.current.children[0], { y: 1000, delay: 0.5, duration: 2 })
       .to(bg_right.current.children[0], { y: -1000, delay: 0.5, duration: 2 })
       .to(bg_left.current, { left: "-100%" })
