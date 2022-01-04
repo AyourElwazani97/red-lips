@@ -11,22 +11,35 @@
   ._hero_bg_red_left {
     position: $ab;
     width: $per;
-    background: #FFF;
+    background: rgb(36, 31, 31);
     z-index: 9 !important;
     height: $vh;
     margin: 0 !important;
     padding: 0 !important;
-    left: -50%;
+    left: 0%;
+    width: calc($per/2);
+    display: $f;
+    justify-content:flex-end;
+    align-items: $c;
+    h1{
+      margin-left: -2%;
+    }
   }
   ._hero_bg_red_right {
     position: $ab;
-    width: $per;
+    width: calc($per/2);
     background: red;
     z-index: 9 !important;
     height: $vh;
     margin: 0 !important;
     padding: 0 !important;
-    right: 50%;
+    right:0%;
+    display: $f;
+    justify-content:flex-start;
+    align-items: $c;
+    h1{
+      margin-left: 2%;
+    }
   }
   h1 {
     font-size: $size;
@@ -93,5 +106,10 @@
         font-size: 1.3em;
       }
     }
+  }
+}
+@media only screen and (min-width:1500px){
+  ._hero {
+    height: $vh;
   }
 }

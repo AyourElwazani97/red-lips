@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import redLips from "../../public/great.jpg";
-import gsap, { Expo } from "gsap";
+import gsap, { Expo, Power4 } from "gsap";
 import SplitText from "../../utils/Split3.min.js";
 function Hero({ styles }) {
   const Main_Title = useRef(null);
@@ -22,10 +21,15 @@ function Hero({ styles }) {
       type: "lines",
       linesClass: "lineParent",
     });
-    const tl = gsap.timeline({ defaults: { delay: 0.2, duration: 1.5 } });
-    tl.to(bg_left.current, { left: "100%", duration: 2 })
-      .to(bg_right.current, { left: "-100%", duration: 2 })
-      .fromTo(inDoubt.current, { opacity: 0 }, { opacity: 1 })
+    const tlIntroduce = gsap
+      .timeline({ defaults: { delay: 0.5, duration: 1.5 } })
+      .to(bg_left.current.children[0], { y: 1000, delay: 0.5, duration: 2 })
+      .to(bg_right.current.children[0], { y: -1000, delay: 0.5, duration: 2 })
+      .to(bg_left.current, { left: "-100%" })
+      .to(bg_right.current, { left: "100%" });
+    //seperate
+    const tl = gsap.timeline({ defaults: { delay: 1, duration: 2 } });
+    tl.fromTo(inDoubt.current, { opacity: 0 }, { opacity: 1 })
       .fromTo(
         inDoubt.current,
         { position: "absolute", top: "50%" },
@@ -82,8 +86,12 @@ function Hero({ styles }) {
         `}
       </style>
       <div ref={heroParent} className={styles._hero}>
-        <div ref={bg_left} className={styles._hero_bg_red_left}></div>
-        <div ref={bg_right} className={styles._hero_bg_red_right}></div>
+        <div ref={bg_left} className={styles._hero_bg_red_left}>
+          <h1>Red</h1>
+        </div>
+        <div ref={bg_right} className={styles._hero_bg_red_right}>
+          <h1>Lips</h1>
+        </div>
         <h1 ref={Main_Title}>Red Lips</h1>
         <div className={styles._hero_Child}>
           <div ref={leftTitle} className={styles.left_title}>
