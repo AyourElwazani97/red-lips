@@ -21,18 +21,17 @@ function Hero({ styles }) {
       type: "lines",
       linesClass: "lineParent",
     });
-    gsap.to(bg_left.current.children[0], { y: 1000, delay: 0.5, duration: 2 });
+    gsap.to(bg_left.current.children[0], { y: 300, delay: 0.5, duration: 2 });
     gsap.to(bg_right.current.children[0], {
-      y: -1000,
+      y: -300,
       delay: 0.5,
       duration: 2,
     });
     //seperate
-    const tl = gsap.timeline({ defaults: { delay: 0.3, duration: 1 }});
-    tl
-    .to(bg_left.current, { left: "-100%" }, 2)
+    const tl = gsap.timeline({ defaults: { delay: 0.3, duration: 1 } });
+    tl.to(bg_left.current, { left: "-100%" }, 2)
       .to(bg_right.current, { right: "-100%" }, 2)
-    .fromTo(inDoubt.current, { opacity: 0 }, { opacity: 1 })
+      .fromTo(inDoubt.current, { opacity: 0 }, { opacity: 1 })
       .fromTo(
         inDoubt.current,
         { position: "absolute", top: "50%" },

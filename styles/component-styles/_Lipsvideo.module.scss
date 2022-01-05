@@ -4,39 +4,57 @@
   display: $f;
   justify-content: $c;
   align-items: $c;
-  background:linear-gradient(to right,$red 60%,#000 40%);
+  background: #000;
   color: #fff;
+  ._lipsVideo_redIt {
+    width: calc($per/2);
+    background: $red;
+    position: $ab;
+    height: 80vh;
+    left: -50%;
+  }
+  ._lipsVideo_whiteIt {
+    width: calc($per/2);
+    background: #fff;
+    position: $ab;
+    height: 80vh;
+    right: -10%;
+  }
   ._lipsVideo_Child {
     position: $re;
     width: $perhelf;
     display: $f;
     justify-content: $c;
     align-items: $c;
+    z-index: 1;
   }
   ._lipsVideo_containter {
     width: $perhelf !important;
     height: 600px !important;
     margin: 0 !important;
     padding: 0 !important;
+    overflow: hidden;
     video {
-      height: 500px;
+      height: 500px !important;
       width: $per;
       position: $ab;
       object-fit: $cv;
+      max-height: 500px !important;
+      min-height: 500px;
     }
   }
   ._lipsVideo_content {
     position: $ab;
     overflow: hidden;
     p {
-      font-size: 6em;
+      font-size: 5em;
       mix-blend-mode: difference;
       font-family: "Maragsa";
-      transform: translate(0px,200px);
+      transform: translate(0px, 200px);
       color: #000;
       width: 100% !important;
     }
-    left: 15%;
+    left: 31%;
     z-index: 1;
   }
   ._lipsVideo_containter {

@@ -6,7 +6,7 @@
   justify-content: $c;
   align-items: $c;
   flex-direction: $cl;
-  background: linear-gradient(to left, $red 51%, #000 50.5%);
+  background: #000;
   position: $re;
   ._reviews_Title {
     position: $ab;
@@ -65,21 +65,21 @@
     }
   }
   .each_rev_textContent {
-    background: linear-gradient(to right,#FFF 50% , #000 50%);
-    width:160px;
-    height:200px;
+    background: linear-gradient(to right, #fff 50%, #000 50%);
+    width: 160px;
+    height: 200px;
     position: $ab;
     bottom: 0;
     right: 46%;
     display: $f;
     justify-content: $c;
     align-items: $c;
-    span{
+    span {
       font-size: 10em;
       position: $ab;
-      left:0%;
+      left: 0%;
       right: 0%;
-      top:8%;
+      top: 8%;
       color: red;
     }
   }
