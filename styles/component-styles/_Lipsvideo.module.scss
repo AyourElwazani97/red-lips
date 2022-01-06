@@ -4,7 +4,7 @@
   display: $f;
   justify-content: $c;
   align-items: $c;
-  background: #000;
+  background: rgb(39, 33, 33);
   color: #fff;
   ._lipsVideo_redIt {
     width: calc($per/2);
@@ -30,7 +30,7 @@
   }
   ._lipsVideo_containter {
     width: $perhelf !important;
-    height: 600px !important;
+    height: 400px !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden;
@@ -39,8 +39,6 @@
       width: $per;
       position: $ab;
       object-fit: $cv;
-      max-height: 500px !important;
-      min-height: 500px;
     }
   }
   ._lipsVideo_content {
@@ -54,7 +52,7 @@
       color: #000;
       width: 100% !important;
     }
-    left: 31%;
+    left: 26%;
     z-index: 1;
   }
   ._lipsVideo_containter {

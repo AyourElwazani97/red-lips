@@ -16,7 +16,7 @@ export default function Home() {
       <Hero styles={styles} />
       <Story styles={styles} />
       <Reviews styles={styles} />
-      <Lipsvideo styles={styles}/>
+      <Lipsvideo styles={styles} />
     </div>
   );
 }
