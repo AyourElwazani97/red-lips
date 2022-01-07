@@ -12,9 +12,7 @@
     height: $vh;
     background: $red;
     clip-path: circle(0%);
-<<<<<<< HEAD
     opacity: 1;
-    z-index: -1;
   }
   ._contact_child {
     z-index: 1;
@@ -41,25 +39,23 @@
     }
     ._contact__content_address {
       position: absolute;
-      top: 48%;
+      top: 52%;
       right: -10%;
       font-family: $font;
       overflow: hidden;
       height: 100px;
       p {
-        transform: translate(0, 100px);
+        transform: translate(0, 200px);
         color: #fff;
         font-weight: $b;
         opacity: 0;
       }
       h2 {
-        transform: translate(0, 100px);
+        transform: translate(0, 200px);
         color: #000;
         opacity: 0;
       }
     }
-=======
-    top: 0;
->>>>>>> 84c0e4f9fafc4ecea11dd5238d06172f8c610f9f
   }
+  
 }

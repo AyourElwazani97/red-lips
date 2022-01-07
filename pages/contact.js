@@ -1,4 +1,4 @@
-import gsap, { Power4 } from "gsap";
+import gsap, { Sine } from "gsap";
 import React, { useEffect, useRef } from "react";
 import styles from "../styles/Home.module.scss";
 function Contact() {
@@ -7,16 +7,33 @@ function Contact() {
   const address = useRef(null);
   useEffect(() => {
     const tl = gsap.timeline({
-      defaults: { ease: Power4.easeOut, delay: 0.5 },
+      defaults: { delay: 1 },
     });
     tl.to(contactClipBackground.current, {
       width: "100%",
       height: "100vh",
       clipPath: "circle(100%)",
-      duration: 2.5,
-    }).to(contactTitle.current, { opacity: 1, y: -20, duration: 1 });
-    gsap.to(address.current.children[0], { opacity: 1, y: -10, duration: 1.5 });
-    gsap.to(address.current.children[1], { opacity: 1, y: -10, duration: 1.5 });
+      duration: 2,
+      ease: Sine.easeOut,
+    });
+    gsap.to(contactTitle.current, {
+      opacity: 1,
+      y: -20,
+      delay: 1.5,
+      duration: 1.6,
+    });
+    gsap.to(address.current.children[0], {
+      opacity: 1,
+      y: -10,
+      duration: 1.5,
+      delay: 1.6,
+    });
+    gsap.to(address.current.children[1], {
+      opacity: 1,
+      y: -10,
+      duration: 1.5,
+      delay: 1.6,
+    });
   }, []);
   return (
     <div className={styles._contact}>
@@ -24,7 +41,7 @@ function Contact() {
         ref={contactClipBackground}
         className={styles._contact_bg_clip}
       ></div>
-      <di className={styles._contact_child}>
+      <div className={styles._contact_child}>
         <div className={styles._contact_Title}>
           <h1 ref={contactTitle}>
             Connect
@@ -36,7 +53,7 @@ function Contact() {
           <p>SEND US AN E-MAIL</p>
           <h2>ayoubwazane306@gmail.com</h2>
         </div>
-      </di>
+      </div>
     </div>
   );
 }
