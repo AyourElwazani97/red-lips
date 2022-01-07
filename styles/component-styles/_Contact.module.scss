@@ -4,11 +4,59 @@
   background: #000;
   opacity: 0.8;
   position: $re;
+  display: $f;
+  justify-content: flex-start;
+  align-items: $c;
   ._contact_bg_clip {
     position: $ab;
     width: 100%;
     height: 100%;
     background: $red;
     clip-path: circle(0%);
+    opacity: 1;
+    z-index: -1;
+  }
+  ._contact_child {
+    z-index: 1;
+    width: $perhelf;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    position: $re;
+    ._contact_Title {
+      overflow: hidden;
+      height: 200px;
+      h1 {
+        margin: 0;
+        font-size: calc($size - 3em);
+        letter-spacing: 30px;
+        padding: 0;
+        font-family: "Maragsa";
+        font-weight: 200;
+        text-align: $c;
+        color: #fff;
+        transform: translate(0, 200px);
+        opacity: 0;
+      }
+    }
+    ._contact__content_address {
+      position: absolute;
+      top: 48%;
+      right: -10%;
+      font-family: $font;
+      overflow: hidden;
+      height: 100px;
+      p {
+        transform: translate(0, 100px);
+        color: #fff;
+        font-weight: $b;
+        opacity: 0;
+      }
+      h2 {
+        transform: translate(0, 100px);
+        color: #000;
+        opacity: 0;
+      }
+    }
   }
 }
