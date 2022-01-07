@@ -9,6 +9,8 @@ function Lipsvideo({ styles }) {
   const video_redBg = useRef(null);
   const video_whiteBg = useRef(null);
   useEffect(() => {
+    const size = 1500;
+    window.innerWidth == 1500
     const tlV = gsap.timeline({
       defaults: { delay: 0.2, duration: 2 },
       scrollTrigger: {
@@ -26,7 +28,7 @@ function Lipsvideo({ styles }) {
         Video.current,
         {
           x: -900,
-          y: -250,
+          y: -200,
         },
         {
           x: 100,
