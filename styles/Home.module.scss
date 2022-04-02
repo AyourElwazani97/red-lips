@@ -10,7 +10,7 @@ $re: relative;
 $ab: absolute;
 $sp: space-around;
 $perhelf: 80%;
-$po: "Poppins", sans-serif;
+$fontText: "Beauty Mountains";
 $ro: "Roboto", sans-serif;
 $font: "Darker Grotesque", sans-serif;
 $n: none;
@@ -23,6 +23,10 @@ $red: #fc1d1d;
     url("./fonts/Maragsâ.ttf") format("ttf"),
     url("./fonts/Maragsa-Display.woff") format("woff"),
     url("./fonts/Maragsa-Display.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Beauty Mountains";
+  src: url("./fonts/BeautyMountainsPersonalUse-od7z.ttf");
 }
 @import "./component-styles/Hero.module";
 @import "./component-styles/Story.module";
