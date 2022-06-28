@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import redLips from "../../public/great.jpg";
 import gsap, { Sine } from "gsap";
-import SplitText from "../../utils/Split3.min.js";
+import SplitText from "../../utils/split3.min.js";
 function Hero({ styles }) {
   const Main_Title = useRef(null);
   const leftTitle = useRef(null);
