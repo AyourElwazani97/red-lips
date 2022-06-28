@@ -23,7 +23,7 @@ function Hero({ styles }) {
     });
     gsap.to(bg_left.current.children[0], { y: 300, delay: 0.5, duration: 2 });
     gsap.to(bg_right.current.children[0], {
-      y: -300,
+      y: -600,
       delay: 0.5,
       duration: 2,
     });
@@ -97,7 +97,7 @@ function Hero({ styles }) {
         <h1 ref={Main_Title}>Red Lips</h1>
         <div className={styles._hero_Child}>
           <div ref={leftTitle} className={styles.left_title}>
-            <span>Life's better in</span>
+            <span>Life&apos;s better in</span>
           </div>
           <div ref={HeroImg} className={styles._hero_container_Img}>
             <img src={redLips} width={840} height={440} alt="" />
