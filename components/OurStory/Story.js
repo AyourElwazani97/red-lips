@@ -90,7 +90,7 @@ function Story({ styles }) {
       intensity: 0.3,
       displacementImage: "/overlay1.jpg",
       easeind: Sine.easeOut,
-      imagesRatio: 1.7,
+      imagesRatio: .6,
     });
   }, []);
   return (
